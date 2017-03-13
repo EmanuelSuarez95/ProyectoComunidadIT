@@ -1,0 +1,104 @@
+﻿@{
+    ViewBag.Title = "Siu guaraní UNRP";
+}
+
+<div class="jumbotron">
+    <h1>Siu Guaraní</h1>
+    <p class="lead">Aplicación web para el registro de alumnos y docentes a materias de X universidad.</p>
+    <p><a href="http://www.unaj.edu.ar/" class="btn btn-primary btn-lg">Página oficial de la Universidad.</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Soy alumno</h2>
+        <p>
+            Aquí podrás consultar tu estado, inscribirte a materias y a finales de las mismas, y verificar tus reportes académicos.
+        </p>
+        <p><button onclick="document.getElementById('modalAlumno').style.display = 'block'">Ingresar</button></p>
+        <div class="modal" id="modalAlumno">
+           
+                    <form class="modal-content animate" action="/action_page.php">
+                        <div class="imgcontainer">
+                            <span onclick="document.getElementById('modalAlumno').style.display = 'none'" class="close" title="Close Modal">&times;</span>
+                            <img src="~/Content/avatarAlumno.jpg" alt="Avatar" class="avatar">
+                        </div>
+
+                        <div class="container">
+                            <label><b>Username</b></label>
+                            <input type="text" placeholder="Enter Username" name="uname" required><br />
+
+                            <label><b>Password</b></label>
+                            <input type="password" placeholder="Enter Password" name="psw" required>
+
+                            <button type="submit">Login</button>
+                            <input type="checkbox" checked="checked"> Remember me
+                        </div>
+
+                        <div class="container" style="background-color:#f1f1f1">
+                            <button type="button" onclick="document.getElementById('modalAlumno').style.display = 'none'" class="cancelbtn">Cancel</button>
+                            <span class="psw">Forgot <a href="#">password?</a></span>
+                        </div>
+                    </form>
+                </div>
+</div>
+    <div class="col-md-4">
+        <h2>Soy docente</h2>
+        <p>En esta sección los docentes pueden dar de alta, de baja o evaluar a los alumnos. Además ver a que materias están asignados.</p>
+        <p><button onclick="document.getElementById('modalDocente').style.display = 'block'">Ingresar</button></p>
+        <div class="modal" id="modalDocente">
+
+            <form class="modal-content animate" action="/action_page.php">
+                <div class="imgcontainer">
+                    <span onclick="document.getElementById('modalDocente').style.display = 'none'" class="close" title="Close Modal">&times;</span>
+                    <img src="~/Content/avatarProf.jpg" alt="Avatar" class="avatar">
+                </div>
+
+                <div class="container">
+                    <label><b>Username</b></label>
+                    <input type="text" placeholder="Enter Username" name="uname" required><br />
+
+                    <label><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="psw" required>
+
+                    <button type="submit">Login</button>
+                    <input type="checkbox" checked="checked"> Remember me
+                </div>
+
+                <div class="container" style="background-color:#f1f1f1">
+                    <button type="button" onclick="document.getElementById('modalDocente').style.display = 'none'" class="cancelbtn">Cancel</button>
+                    <span class="psw">Forgot <a href="#">password?</a></span>
+                </div>
+            </form>
+        </div>
+       </div>
+    <div class="col-md-4">
+        <h2>Soy administrador</h2>
+        <p>Aquí el administrador puede dar de alta alumnos, docentes y materias. Además puede asignar docentes a las distintas materias.</p>
+        <p><button onclick="document.getElementById('modalAdmin').style.display = 'block'">Ingresar</button></p>
+        <div class="modal" id="modalAdmin">
+
+            <form class="modal-content animate" action="/action_page.php">
+                <div class="imgcontainer">
+                    <span onclick="document.getElementById('modalAdmin').style.display = 'none'" class="close" title="Close Modal">&times;</span>
+                    <img src="~/Content/avatarAdmin.jpg" alt="Avatar" class="avatar">
+                </div>
+
+                <div class="container">
+                    <label><b>Username</b></label>
+                    <input type="text" placeholder="Enter Username" name="uname" required><br />
+
+                    <label><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="psw" required>
+
+                    <button type="submit">Login</button>
+                    <input type="checkbox" checked="checked"> Remember me
+                </div>
+
+                <div class="container" style="background-color:#f1f1f1">
+                    <button type="button" onclick="document.getElementById('modalAdmin').style.display = 'none'" class="cancelbtn">Cancel</button>
+                    <span class="psw">Forgot <a href="#">password?</a></span>
+                </div>
+            </form>
+        </div>
+      </div>
+</div>

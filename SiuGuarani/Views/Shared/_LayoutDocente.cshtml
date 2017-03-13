@@ -1,0 +1,85 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" charset="utf-8" />
+    <title>LayoutDocente</title>
+</head>
+<body>
+    <img src="titulo.jpg" height="100px" width="1366">
+
+    <div class="row menu">
+
+        <div id="menu2" class="col-md-6 col-md-offset-0 col-xs-4 col-xs-offset-2">
+
+            <ul class="nav navbar-nav navbar-left menu" id="menu1">
+
+
+                <li class="dropdown" id="peliculas">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span id="peli">Películas</span> <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="Películas/Comedia.html">Comedia</a></li>
+                        <li><a href="Películas/Drama.html">Drama</a></li>
+                        <li><a href="Películas/Thrillers.html">Thrillers</a></li>
+                        <li><a href="Películas/Infantiles.html">Infantiles</a></li>
+                        <li><a href="Películas/Acción.html">Acción</a></li>
+                        <li><a href="Películas/Terror.html">Terror</a></li>
+
+                    </ul>
+                </li>
+                <li class="dropdown" id="juegos">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span id="juego">Juegos</span> <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="Juegos/PS2.html">PS2</a></li>
+                        <li><a href="Juegos/PS3.html">PS3</a></li>
+                        <li><a href="Juegos/PC.html">PC</a></li>
+                        <li><a href="Juegos/Xbox.html">XBOX</a></li>
+                        <li><a href="Juegos/Sega.html">SEGA</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown" id="series">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span id="juego">Series</span> <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="Series/Drama.html">Drama</a></li>
+                        <li><a href="Series/Policiales.html">Policiales</a></li>
+                        <li><a href="Series/Anime.html">Anime</a></li>
+                        <li><a href="Series/Argentinas.html">Argentinas</a></li>
+                        <li><a href="Series/Comedia.html">Comedia</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown" id="libros">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span id="libro">Libros</span> <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="Libros/CienciaFicción.html">Ciencia Ficción</a></li>
+                        <li><a href="Libros/Policiales.html">Policiales</a></li>
+                        <li><a href="Libros/Drama.html">Drama</a></li>
+                        <li><a href="Libros/Románticos.html">Románticos</a></li>
+                        <li><a href="Libros/Terror.html">Terror</a></li>
+
+                    </ul>
+                </li>
+                <li class="dropdown" id="programas">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span id="programa">Programas</span> <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="Programas/Windows.html">Windows</a></li>
+                        <li><a href="Programas/Linux.html">Linux</a></li>
+                        <li><a href="Programas/MCOS.html">MC Os</a></li>
+                        <li><a href="Programas/Android.html">Android</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div>
+                @RenderBody()
+                <footer>
+
+                    @DateTime.Now.Year - Siu Guaraní UNRP
+                </footer>
+            </div>
+            </div>
+</body>
+</html>
