@@ -49,5 +49,18 @@ namespace SiuGuarani.Controllers
             }
             return View("/Views/Home/Index.cshtml");
         }
+
+        public ActionResult InscripcionMaterias()
+        {
+            return View();
+        }
+        public ActionResult InscripcionExamenes()
+        {
+            return View();
+        }
+        public ActionResult InscripcionPracticas()
+        {
+            return View();
+        }
     }
 }

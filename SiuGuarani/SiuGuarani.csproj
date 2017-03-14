@@ -158,7 +158,9 @@
     <Compile Include="Models\Administrador.cs" />
     <Compile Include="Models\Alumno.cs" />
     <Compile Include="Models\Carrera.cs" />
+    <Compile Include="Models\Comision.cs" />
     <Compile Include="Models\Docente.cs" />
+    <Compile Include="Models\Instituto.cs" />
     <Compile Include="Models\Materia.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -206,6 +208,15 @@
     <Content Include="Views\Admin\Index.cshtml" />
     <Content Include="Views\Alumnos\Index.cshtml" />
     <Content Include="Views\Docentes\Index.cshtml" />
+    <Content Include="Views\Alumnos\InscripcionMaterias.cshtml" />
+    <Content Include="Views\Alumnos\InscripcionExamenes.cshtml" />
+    <Content Include="Views\Alumnos\InscripcionPracticas.cshtml" />
+    <Content Include="Views\Alumnos\HistoriaAcademica.cshtml" />
+    <Content Include="Views\Alumnos\InscripcionesActuales.cshtml" />
+    <Content Include="Views\Alumnos\Inasistencias.cshtml" />
+    <Content Include="Views\Alumnos\DatosPersonales.cshtml" />
+    <Content Include="Views\Alumnos\SolicitudTitulo.cshtml" />
+    <Content Include="Views\Alumnos\SolicitudConstancias.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

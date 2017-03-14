@@ -16,47 +16,70 @@
     <img src="http://www.gwcpics.com/images/abstract/black-red-line-light.jpg" height="100" width="1366">
 
     <div class="row menu">
+        <div id="menu1" class="col col-md-2 col-md-offset-0 col-xs-4 col-xs-offset-2">
 
-        <div id="menu" class="col-md-6 col-md-offset-0 col-xs-4 col-xs-offset-2">
 
-            <ul class="nav navbar-nav navbar-left menu" id="menu1">
+        </div>
+        <div id="menu2" class="col-md-6 col-md-offset-0 col-xs-4 col-xs-offset-2">
+
+            <ul class="nav navbar-nav navbar-left menu" id="navegation">
 
 
                 <li class="dropdown" id="inscripcion">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span id="peli">Inscripción</span> <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="Películas/Comedia.html">Inscripción a materias</a></li>
-                        <li><a href="Películas/Drama.html">Inscripción a examenes</a></li>
-                        <li><a href="Películas/Thrillers.html">Inscripción a prácticas</a></li>
+                        <li><a href="@Url.Action("InscripcionMaterias","Alumnos")">Inscripción a materias</a></li>
+                        <li><a href="@Url.Action("InscripcionExamenes","Alumnos")">Inscripción a examenes</a></li>
+                        <li><a href="@Url.Action("InscripcionPracticas","Alumnos")">Inscripción a prácticas</a></li>
 
                     </ul>
                 </li>
                 <li class="dropdown" id="reportes">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span id="juego">Reportes</span> <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="Juegos/PS2.html">Historia Académica</a></li>
-                        <li><a href="Juegos/PS3.html">Mis inscripciones</a></li>
-                        <li><a href="Juegos/PC.html">Inasistencias</a></li>
+                        <li><a href="@Url.Action("HistoriaAcademica","Alumnos")">Historia Académica</a></li>
+                        <li><a href="@Url.Action("InscripcionesActuales","Alumnos")">Mis inscripciones</a></li>
+                        <li><a href="@Url.Action("Inasistencias","Alumnos")">Inasistencias</a></li>
                     </ul>
                 </li>
                 <li class="dropdown" id="tramites">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span id="juego">Trámites</span> <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="Series/Drama.html">Datos personales</a></li>
-                        <li><a href="Series/Policiales.html">Solicitud de título</a></li>
-                        <li><a href="Series/Anime.html">Solicitud de constancias y certificados</a></li>
+                        <li><a href="@Url.Action("DatosPersonales","Alumnos")">Datos personales</a></li>
+                        <li><a href="@Url.Action("SolicitudTitulo","Alumnos")">Solicitud de título</a></li>
+                        <li><a href="@Url.Action("SolicitudConstancias","Alumnos")">Solicitud de constancias y certificados</a></li>
                     </ul>
                 </li>
             </ul>
+            </div>
+            <div class="col-md-4 col-md-offset-0 col-xs-4 col-xs-offset-2">
+                <ul class="nav navbar-nav navbar-right config" id="menu2">
+                    <li><a href="@Url.Action("Index","Alumnos")">Inicio</a></li>
+                    <li class="dropdown" id="menuUsuario">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span id="nomUsuario">@ViewBag.alumno</span> <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Mi Perfil</a></li>
+                            <li><a href="#">Configuración</a></li>
+                            <li><a href="#">Privacidad</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="@Url.Action("Index","Home")">Cerrar sesión</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        <div>
+
+            @RenderBody()
+
+        </div>
             <div>
-                @RenderBody()
                 <footer>
 
                     @DateTime.Now.Year - Siu Guaraní UNRP
                 </footer>
             </div>
         </div>
-        </div>
+    
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)

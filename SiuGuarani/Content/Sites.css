@@ -25,6 +25,7 @@
 	font-style: italic;
 	background-image: url("imagenMenu.jpg");
 	width: 100%;
+    margin:auto 0;
 }
 
 #menuUsuario{

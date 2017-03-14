@@ -16,6 +16,7 @@ namespace SiuGuarani.Models
         public List<Docente> listaDocentes;
         public List<Carrera> listaCarreras;
         public List<Comision> listaComisiones;
+        public List<Instituto> listaInstitutos;
 
         private Administrador(string dni, string pass,string nombre, string apellido)
         {
@@ -26,9 +27,27 @@ namespace SiuGuarani.Models
         }
 
         Administrador admin = new Administrador("39155502","39155502","Emanuel","Suárez");
+
         public void nuevoAlumno(Alumno alumno)
         {
             listaAlumnos.Add(alumno);
         }
+        public void nuevoInstituto(Instituto instituto)
+        {
+            listaInstitutos.Add(instituto);
+        }
+        public void nuevoDocente(Docente docente)
+        {
+            listaDocentes.Add(docente);
+        }
+        public void nuevaCarrera(Carrera carrera)
+        {
+            listaCarreras.Add(carrera);
+        }
+        public void nuevaMateria(Materia materia)
+        {
+            listaMaterias.Add(materia);
+        }
+
     }
 }
