@@ -9,9 +9,9 @@ namespace SiuGuarani.Controllers
     public class AdminController : Controller
     {
         // GET: Admin
-        public ActionResult Index()
+        public ActionResult IngresarAdmin(string usuario, string contraseña)
         {
-            return View();
+            return View("Index");
         }
     }
 }

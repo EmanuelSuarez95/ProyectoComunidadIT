@@ -9,9 +9,9 @@ namespace SiuGuarani.Controllers
     public class DocentesController : Controller
     {
         // GET: Docentes
-        public ActionResult Index()
+        public ActionResult IngresarDocente(string usuario, string contraseña)
         {
-            return View();
+            return View("Index");
         }
     }
 }

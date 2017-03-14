@@ -7,5 +7,10 @@ namespace SiuGuarani.Models
 {
     public class Carrera
     {
+        public string Nombre;
+        public Instituto instituto;
+        public List<Materia> listadoMaterias;
+
+
     }
 }

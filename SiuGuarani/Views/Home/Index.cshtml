@@ -17,26 +17,26 @@
         <p><button onclick="document.getElementById('modalAlumno').style.display = 'block'">Ingresar</button></p>
         <div class="modal" id="modalAlumno">
            
-                    <form class="modal-content animate" action="/action_page.php">
+                    <form class="modal-content animate" action="@Url.Action("IngresarAlumno", "Alumnos")" method="post">
                         <div class="imgcontainer">
                             <span onclick="document.getElementById('modalAlumno').style.display = 'none'" class="close" title="Close Modal">&times;</span>
                             <img src="~/Content/avatarAlumno.jpg" alt="Avatar" class="avatar">
                         </div>
 
                         <div class="container">
-                            <label><b>Username</b></label>
-                            <input type="text" placeholder="Enter Username" name="uname" required><br />
+                            <label><b>Dni</b></label>
+                            <input type="text" placeholder="ej:30809060" name="usuario" required><br />
 
-                            <label><b>Password</b></label>
-                            <input type="password" placeholder="Enter Password" name="psw" required>
+                            <label><b>Contraseña</b></label>
+                            <input type="password" placeholder="********" name="contraseña" required>
 
-                            <button type="submit">Login</button>
-                            <input type="checkbox" checked="checked"> Remember me
+                            <button type="submit">Ingresar</button>
+                            <input type="checkbox" checked="checked"> Recordar datos
                         </div>
 
                         <div class="container" style="background-color:#f1f1f1">
-                            <button type="button" onclick="document.getElementById('modalAlumno').style.display = 'none'" class="cancelbtn">Cancel</button>
-                            <span class="psw">Forgot <a href="#">password?</a></span>
+                            <button type="button" onclick="document.getElementById('modalAlumno').style.display = 'none'" class="cancelbtn">Cancelar</button>
+                            <span class="psw">Olvidaste tu  <a href="#">contraseña?</a></span>
                         </div>
                     </form>
                 </div>
@@ -47,26 +47,26 @@
         <p><button onclick="document.getElementById('modalDocente').style.display = 'block'">Ingresar</button></p>
         <div class="modal" id="modalDocente">
 
-            <form class="modal-content animate" action="/action_page.php">
+            <form class="modal-content animate" action="@Url.Action("IngresarDocente","Docentes")" method="post">
                 <div class="imgcontainer">
                     <span onclick="document.getElementById('modalDocente').style.display = 'none'" class="close" title="Close Modal">&times;</span>
                     <img src="~/Content/avatarProf.jpg" alt="Avatar" class="avatar">
                 </div>
 
                 <div class="container">
-                    <label><b>Username</b></label>
-                    <input type="text" placeholder="Enter Username" name="uname" required><br />
+                    <label><b>Dni</b></label>
+                    <input type="text" placeholder="ej:30809060" name="usuario" required><br />
 
-                    <label><b>Password</b></label>
-                    <input type="password" placeholder="Enter Password" name="psw" required>
+                    <label><b>Contraseña</b></label>
+                    <input type="password" placeholder="********" name="contraseña" required>
 
-                    <button type="submit">Login</button>
-                    <input type="checkbox" checked="checked"> Remember me
+                    <button type="submit">Ingresar</button>
+                    <input type="checkbox" checked="checked"> Recordar datos
                 </div>
 
                 <div class="container" style="background-color:#f1f1f1">
-                    <button type="button" onclick="document.getElementById('modalDocente').style.display = 'none'" class="cancelbtn">Cancel</button>
-                    <span class="psw">Forgot <a href="#">password?</a></span>
+                    <button type="button" onclick="document.getElementById('modalDocente').style.display = 'none'" class="cancelbtn">Cancelar</button>
+                    <span class="psw">Olvidaste tu  <a href="#">contraseña?</a></span>
                 </div>
             </form>
         </div>
@@ -77,26 +77,26 @@
         <p><button onclick="document.getElementById('modalAdmin').style.display = 'block'">Ingresar</button></p>
         <div class="modal" id="modalAdmin">
 
-            <form class="modal-content animate" action="/action_page.php">
+            <form class="modal-content animate" action="@Url.Action("IngresarAdmin","Admin")" method="post">
                 <div class="imgcontainer">
                     <span onclick="document.getElementById('modalAdmin').style.display = 'none'" class="close" title="Close Modal">&times;</span>
                     <img src="~/Content/avatarAdmin.jpg" alt="Avatar" class="avatar">
                 </div>
 
                 <div class="container">
-                    <label><b>Username</b></label>
-                    <input type="text" placeholder="Enter Username" name="uname" required><br />
+                    <label><b>Dni</b></label>
+                    <input type="text" placeholder="ej:30809060" name="usuario" required><br />
 
-                    <label><b>Password</b></label>
-                    <input type="password" placeholder="Enter Password" name="psw" required>
+                    <label><b>Contraseña</b></label>
+                    <input type="password" placeholder="********" name="contraseña" required>
 
-                    <button type="submit">Login</button>
-                    <input type="checkbox" checked="checked"> Remember me
+                    <button type="submit">Ingresar</button>
+                    <input type="checkbox" checked="checked"> Recordar datos
                 </div>
 
                 <div class="container" style="background-color:#f1f1f1">
-                    <button type="button" onclick="document.getElementById('modalAdmin').style.display = 'none'" class="cancelbtn">Cancel</button>
-                    <span class="psw">Forgot <a href="#">password?</a></span>
+                    <button type="button" onclick="document.getElementById('modalAdmin').style.display = 'none'" class="cancelbtn">Cancelar</button>
+                    <span class="psw">Olvidaste tu  <a href="#">contraseña?</a></span>
                 </div>
             </form>
         </div>
