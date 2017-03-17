@@ -10,13 +10,15 @@
 </head>
 <body>
 
-    <div class="container body-content">
+    <div class="body-content">
         @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - Siu Guaraní UNRP</p>
-        </footer>
+
     </div>
+    <hr />
+
+    <footer>
+        <span>&copy; @DateTime.Now.Year - Siu Guaraní UNRP</span>
+    </footer>
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")

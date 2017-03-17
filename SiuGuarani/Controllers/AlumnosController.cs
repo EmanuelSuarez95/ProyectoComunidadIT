@@ -9,10 +9,14 @@ namespace SiuGuarani.Controllers
     public class AlumnosController : Controller
     {
         // GET: Alumnos
-        public ActionResult IngresarAlumno(string usuario, string contraseña)
+        public ActionResult Index()
+        {
+            return View();
+        }
+        public ActionResult IngresarAlumno(long usuario, string contraseña)
         {
 
-            string usuarioDni = usuario;
+            long usuarioDni = usuario;
             string usuarioContraseña = contraseña;
             List<Models.Alumno> listaAlumnos = (List<Models.Alumno>)Session["Alumnos"];
             if (listaAlumnos == null)
@@ -20,8 +24,9 @@ namespace SiuGuarani.Controllers
                 listaAlumnos = new List<Models.Alumno>();
             }
             Models.Alumno Ema = new Models.Alumno();
-            Ema.dni = "39155502";
+            Ema.dni = 39155502;
             Ema.pass = "chamaco";
+            Ema.nombre = "Ema";
             listaAlumnos.Add(Ema);
             
             foreach (Models.Alumno alumno in listaAlumnos)
@@ -30,7 +35,7 @@ namespace SiuGuarani.Controllers
                 {
                     if (usuarioContraseña == alumno.pass)
                     {
-                        ViewBag.alumno = alumno.dni;
+                        ViewBag.alumno = alumno.nombre;
                         return View("Index");
                     }
 

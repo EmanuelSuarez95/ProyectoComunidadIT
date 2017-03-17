@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "AgregarAlumno";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Agregar Alumno</h2>
+<div >
+    <form method="post" action="@Url.Action("AgregarAlumno","Admin")">
+        <label>Nombre </label><input type="text" name="nombre"/>
+        <label>Apellido </label><input type="text" name="apellido" />
+        <label>Dni </label><input type="number" name="dni" />
+        <label>Carrera </label><input type="text" name="carrera" />
+        <label>Telefono </label><input type="text" name="telefono" />
+        <label>Mail</label><input type="email" name="mail" />
+        <input type="submit" value="Agregar" />
+
+    </form>
+</div>
+

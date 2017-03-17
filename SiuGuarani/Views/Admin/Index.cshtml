@@ -4,5 +4,27 @@
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-<h2>Index</h2>
+<h2>Inicio</h2>
+<div class="row">
+    <div class="col-md-4 col-lg-offset-0">
+        <a href="@Url.Action("AlumnoNuevo","Admin")">Nuevo Alumno</a>
+    </div>
+    <div class="col-md-4 col-lg-offset-0">
+        <a href="@Url.Action("CarreraNueva","Admin")">Nueva Carrera</a>
+    </div>
+    <div class="col-md-4 col-lg-offset-0">
+        <a href="@Url.Action("ComisionNueva","Admin")">Nueva Comisión</a>
+    </div>
+    <div class="col-md-4 col-lg-offset-0">
+        <a href="@Url.Action("DocenteNuevo","Admin")">Nuevo Docente</a>
+    </div>
+    <div class="col-md-4 col-lg-offset-0">
+        <a href="@Url.Action("InstitutoNuevo","Admin")">Nuevo Instituto</a>
+    </div>
+    <div class="col-md-4 col-lg-offset-0">
+        <a href="@Url.Action("MateriaNueva","Admin")">Nueva Materia</a>
+    </div>
+</div>
+
+
 

@@ -11,7 +11,11 @@ body .jumbotron {
         background-image: url("http://www.fondos7.net/wallpaper-original/wallpapers/fondo-rojo-5634.jpg");
         background-size:100%;
     }
+#menu{
+    background-image:url("http://www.fondos7.net/wallpaper-original/wallpapers/fondo-rojo-5634.jpg");
 
+
+}
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
@@ -29,10 +33,6 @@ body .jumbotron {
 select,
 textarea {
     max-width: 280px;
-}
-footer{
-    text-align: center;
-    margin : auto 0;
 }
 input[type=text], input[type=password] {
     width: 100%;
