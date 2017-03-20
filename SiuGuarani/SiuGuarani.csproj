@@ -156,23 +156,29 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Administrador.cs" />
+    <Compile Include="Models\AdministradorManager.cs" />
     <Compile Include="Models\Alumno.cs" />
     <Compile Include="Models\AlumnoManager.cs" />
     <Compile Include="Models\Carrera.cs" />
+    <Compile Include="Models\CarreraManager.cs" />
     <Compile Include="Models\Comision.cs" />
+    <Compile Include="Models\ComisionManager.cs" />
     <Compile Include="Models\Dia.cs" />
     <Compile Include="Models\Docente.cs" />
+    <Compile Include="Models\DocenteManager.cs" />
     <Compile Include="Models\Instituto.cs" />
+    <Compile Include="Models\InstitutoManger.cs" />
     <Compile Include="Models\Materia.cs" />
+    <Compile Include="Models\MateriaManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Site.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -224,6 +230,12 @@
     <Content Include="Views\Admin\AgregarCarrera.cshtml" />
     <Content Include="Views\Admin\AgregarComision.cshtml" />
     <Content Include="Views\Admin\AgregarInstituto.cshtml" />
+    <Content Include="Views\Admin\BorrarAlumno.cshtml" />
+    <Content Include="Views\Admin\BorrarDocente.cshtml" />
+    <Content Include="Views\Admin\BorrarMateria.cshtml" />
+    <Content Include="Views\Admin\BorrarComision.cshtml" />
+    <Content Include="Views\Admin\BorrarInstituto.cshtml" />
+    <Content Include="Views\Admin\BorrarCarrera.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

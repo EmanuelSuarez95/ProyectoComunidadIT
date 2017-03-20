@@ -5,4 +5,25 @@
 }
 
 <h2>AgregarDocente</h2>
+<div class="formulario">
+    <form method="post" action="@Url.Action("AgregarDocente","Admin")">
+        <label>Nombre </label>
+        <input type="text" name="nombre" /><br />
+        <label>Apellido </label>
+        <input type="text" name="apellido" /><br />
+        <label>Dni </label></br>
+        <input type="number" name="dni" /><br />
+        <label>Carrera </label>
+        <input type="text" name="carrera" /><br />
+        <label>Telefono </label><br />
+        <input type="text" name="telefono" /><br />
+        <label>Mail</label></br>
+        <input type="email" name="mail" /><br />
+
+        <hr />
+        <label><input type="submit" value="Agregar" /></label>
+
+    </form>
+</div>
+
 

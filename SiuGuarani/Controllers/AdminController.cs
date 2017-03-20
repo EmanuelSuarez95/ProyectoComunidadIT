@@ -8,12 +8,24 @@ namespace SiuGuarani.Controllers
 {
     public class AdminController : Controller
     {
-        // Ingresar como Administrador
-        public ActionResult IngresarAdmin(string usuario, long contraseña)
+        // Ingresar como Administrador (Ya existe un admin predeterminado en la bbdd)
+        public ActionResult IngresarAdmin(string usuario, string contraseña)
         {
-            return View("Index");
+            string dni = usuario;
+            string pass = contraseña;
+            Models.AdministradorManager manager = new Models.AdministradorManager();
+            List<Models.Administrador> listaAdmin = manager.ConsultarDatos();
+            foreach(Models.Administrador admin in listaAdmin)
+            {
+                if(admin.dni == dni & admin.pass == pass)
+                {
+                    return View("Index");
+                }
+
+            }
+            return View("/Views/Home/Index.cshtml");
         }
-        //Ir a la vista que agrega elementos
+        //Ir a las vistas que agregan elementos
         public ActionResult AlumnoNuevo()
         {
             return View("AgregarAlumno");
@@ -39,8 +51,35 @@ namespace SiuGuarani.Controllers
             return View("AgregarDocente");
         }
 
+        //Ir a vistas que eliminan elementos
+        public ActionResult EliminarAlumno()
+        {
+            return View("BorrarAlumno");
+        }
+        public ActionResult EliminarCarrera()
+        {
+            return View("BorrarCarrera");
+        }
+        public ActionResult EliminarComision()
+        {
+            return View("BorrarComision");
+        }
+        public ActionResult EliminarInstituto()
+        {
+            return View("BorrarInstituto");
+        }
+        public ActionResult ElmiinarMateria()
+        {
+            return View("BorrarMateria");
+        }
+        public ActionResult ElminarDocente()
+        {
+            return View("BorrarDocente");
+        }
+
+
         //Formulario para agregar alumnos
-        public ActionResult AgregarAlumno(string nombre,string apellido, long dni, string carrera, long telefono,string mail)
+        public ActionResult AgregarAlumno(string nombre,string apellido, string dni, string carrera, long telefono,string mail)
         {
             Models.Alumno alumno = new Models.Alumno();
             alumno.dni = dni;
@@ -51,7 +90,7 @@ namespace SiuGuarani.Controllers
 
 
             Models.AlumnoManager alumnoManager = new Models.AlumnoManager();
-            alumnoManager.Insertar(alumno);
+            alumnoManager.Agregar(alumno);
                 return View("Index");
 
         }
@@ -69,7 +108,7 @@ namespace SiuGuarani.Controllers
             return View("Index");
         }
         //Formulario para agregar docentes
-        public ActionResult AgregarDocente(string nombre, string apellido, long telefono, string mail, long dni)
+        public ActionResult AgregarDocente(string nombre, string apellido, long telefono, string mail, string dni)
         {
             Models.Docente docente = new Models.Docente();
             docente.nombre = nombre;
@@ -77,6 +116,8 @@ namespace SiuGuarani.Controllers
             docente.telefono = telefono;
             docente.mail = mail;
             docente.dni = dni;
+            Models.DocenteManager docenteManager = new Models.DocenteManager();
+            docenteManager.Agregar(docente);
 
             return View("Index");
         }
@@ -94,7 +135,12 @@ namespace SiuGuarani.Controllers
             materia.nombre= nombre;
             return View("Index");
         }
-
+        //Formulario para eliminar 
+        //Formulario para eliminar 
+        //Formulario para eliminar 
+        //Formulario para eliminar 
+        //Formulario para eliminar 
+        //Formulario para eliminar 
     }
 
 }

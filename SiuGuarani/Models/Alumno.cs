@@ -7,7 +7,7 @@ namespace SiuGuarani.Models
 {
     public class Alumno
     {
-        public long dni { get; set; }
+        public string dni { get; set; }
         public string pass { get; set; }
         public Carrera carrera { get; set; }
         public string nombre { get; set; }

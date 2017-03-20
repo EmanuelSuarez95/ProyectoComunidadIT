@@ -13,47 +13,26 @@ namespace SiuGuarani.Controllers
         {
             return View();
         }
-        public ActionResult IngresarAlumno(long usuario, string contraseña)
+        public ActionResult IngresarAlumno(string usuario, string contraseña)
         {
 
-            long usuarioDni = usuario;
-            string usuarioContraseña = contraseña;
-            List<Models.Alumno> listaAlumnos = (List<Models.Alumno>)Session["Alumnos"];
-            if (listaAlumnos == null)
-            {
-                listaAlumnos = new List<Models.Alumno>();
-            }
-            Models.Alumno Ema = new Models.Alumno();
-            Ema.dni = 39155502;
-            Ema.pass = "chamaco";
-            Ema.nombre = "Ema";
-            listaAlumnos.Add(Ema);
-            
+            string dni = usuario;
+            string pass = contraseña;
+            Models.AlumnoManager manager = new Models.AlumnoManager();
+            List<Models.Alumno> listaAlumnos = manager.ConsultarDatos();
             foreach (Models.Alumno alumno in listaAlumnos)
             {
-                if (usuarioDni == alumno.dni)
+                if (alumno.dni == dni & alumno.pass == pass)
                 {
-                    if (usuarioContraseña == alumno.pass)
-                    {
-                        ViewBag.alumno = alumno.nombre;
-                        return View("Index");
-                    }
-
-                    else
-                    {
-
-                        ViewBag.mensaje = "La contraseña es incorrecta";
-                        return View("/Views/Home/Index.cshtml");
-                    }
-                }
-                else
-                {
-                    return View("/Views/Home/Index.cshtml");
+                    
+                    ViewBag.alumno = dni;
+                    return View("Index");
                 }
 
             }
             return View("/Views/Home/Index.cshtml");
         }
+           
 
         public ActionResult InscripcionMaterias()
         {

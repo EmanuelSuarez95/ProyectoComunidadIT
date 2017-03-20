@@ -7,10 +7,10 @@ namespace SiuGuarani.Models
 {
     public class Administrador
     {
-        private string nombre;
-        private string apellido;
-        private string dni;
-        private string pass;
+        private string nombre { get; set; }
+        private string apellido { get; set; }
+        public string dni { get; set; }
+        public string pass { get; set; }
         public List<Alumno> listaAlumnos;
         public List<Materia> listaMaterias;
         public List<Docente> listaDocentes;
@@ -18,15 +18,11 @@ namespace SiuGuarani.Models
         public List<Comision> listaComisiones;
         public List<Instituto> listaInstitutos;
 
-        private Administrador(string dni, string pass,string nombre, string apellido)
+        public Administrador()
         {
-            dni = this.dni;
-            pass = this.pass;
-            nombre = this.nombre;
-            apellido = this.apellido;
-        }
 
-        Administrador admin = new Administrador("39155502","39155502","Emanuel","Suárez");
+        }
+        
 
         public void nuevoAlumno(Alumno alumno)
         {
